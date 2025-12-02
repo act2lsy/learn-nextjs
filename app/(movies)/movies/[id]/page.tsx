@@ -14,6 +14,7 @@ import { API_URL } from "../../../(home)/page";
 type Params = Promise<{ id: string }>;
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
+//자동호출
 export async function generateMetadata(props: { params: Params }) {
   const id = (await props.params).id;
   const movie = await getMovie(id);
